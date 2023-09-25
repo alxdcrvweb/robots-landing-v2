@@ -1,0 +1,200 @@
+.container
+    background-size: cover
+    overflow: hidden!important
+    height: calc(100vh - 36px)
+    min-height: 600px
+    width: 100vw
+.explore__left__image
+    position: absolute
+    cursor: pointer
+    top: 50%
+    left: 50px
+    transform: translateY(-58%)
+    @media (max-width: 1150px)
+        display: none
+.explore__right__image
+    position: absolute
+    top: 50%
+    left: auto
+    right: 0px
+    display: flex
+    align-items: center
+    transform: translateY(-121%) rotateZ(90deg)
+    color: white
+    text-align: center
+    font-family: 'ChakraPetch'
+    font-size: 12px
+    font-style: normal
+    font-weight: 600
+    line-height: 25.369px
+    letter-spacing: 0.6px
+    text-transform: uppercase
+    .explore__right__text
+        margin-right: 20px
+        width: 63px
+    .explore__right__tba
+        color: #FAE232
+        margin-left: 20px
+    img
+        transform: rotateZ(-90deg)
+    @media (max-width: 1150px)
+        display: none
+.separator
+    width: 230px
+    border-top: 1px solid rgba(255, 255, 255, 0.5) 
+.main
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: space-between
+.explore__header
+    display: flex
+    align-items: center
+    margin-top: 120px
+    margin-bottom: 40px
+    color: #FFF
+    text-align: center
+    text-shadow: 0px 1px 6px #FFF
+    font-family: 'ChakraPetch'
+    font-size: 14px
+    font-style: normal
+    font-weight: 700
+    line-height: 139%
+    @media (max-width: 600px)
+        margin-top: 40px
+.cryptera
+    display: flex
+    justify-content: space-between
+    align-items: center
+    // margin-top: 200px
+.explore__img
+    overflow: hidden
+    height: fit-content
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-left: 48px
+    padding-right: 48px
+    img
+        transition: 1000ms ease all
+    @media (max-width: 1300px)
+        padding-left: 0px
+        padding-right: 0px
+    @media (max-width: 600px)
+        display: none
+.explore__header__image__rotate
+    transform: rotateZ(180deg)
+    filter: drop-shadow(0px 1px 6px #FFF)
+.explore__header__image
+    transform: rotateZ(0deg)
+    filter: drop-shadow(0px 1px 6px #FFF)
+.explore__header__text__right__animated
+    transform: translateX(-300px)
+.explore__header__text__left__animated
+    transform: translateX(300px)
+.explore__header__text
+    transition: 500ms ease all
+    overflow: hidden
+.explore__header__static__left
+    transform: translateX(0px)
+    margin-right: 20px
+.explore__header__static__right
+    transform: translateX(0px)
+    margin-left: 20px
+.explore__title
+    color: #fff
+    text-align: center
+    text-shadow: -1px 1px 9px rgba(255, 255, 255, 0.75)
+    font-family: 'ChakraPetch'
+    font-size: 82.814px
+    font-style: normal
+    font-weight: 700
+    line-height: 22.438px
+    letter-spacing: 4.141px
+    text-transform: uppercase
+    margin-bottom: 30px
+    @media (max-width: 600px)
+        font-size: 38px
+.animation
+    transform: translateX(-600px)
+    margin: 0!important
+    &2
+        margin: 0!important
+        transform: translateX(600px)
+
+.static
+    transform: translateX(0px)
+    margin: 0!important
+
+.banner
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: calc(100vh - 137px)
+    flex-direction: column
+
+    .text
+        color: #FFF
+        text-align: center
+        text-shadow: 0px 1px 6px #FFF
+        font-family: 'ChakraPetch'
+        max-width: 785px
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 139%
+        margin-top: 10px
+        @media ( max-width: 600px )
+            width: 60vw
+            font-size: 12px
+.shade
+    position: absolute
+    z-index: -1
+.base
+    display: flex
+    align-items: flex-start
+    padding-top: 150px
+    padding-left: 115px
+    padding-right: 105px
+    justify-content: flex-start
+    height: 812px
+.team
+    display: grid
+    grid-template-columns: 1fr 1350px 1fr
+    padding-top: 150px
+    height: 812px
+.explore__main
+    display: flex
+    justify-content: center
+    align-items: center
+.explore
+    display: flex
+    justify-content: flex-end
+    align-items: flex-start
+    flex-direction: column
+    form
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        margin-top: 50px
+    input
+        border: 1px solid black
+        padding: 10px
+        margin: 10px
+        width: 50%
+
+.menues
+    display: flex
+    justify-content: flex-start
+    width: 100vw
+    height: 258px
+    overflow: hidden!important
+.menues__top
+    display: flex
+    justify-content: flex-start
+    width: 100vw
+    height: 205px
+    z-index: 5

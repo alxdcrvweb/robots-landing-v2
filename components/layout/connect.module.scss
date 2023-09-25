@@ -1,0 +1,47 @@
+.contract {
+  color: white !important;
+}
+
+.console__header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 22px;
+  margin-top: 0px;
+  width: 416px;
+  .console__link {
+    overflow: hidden;
+    width: 135px;
+    a {
+      color: white;
+      overflow: hidden;
+      z-index: 5;
+    }
+    .console__animation {
+      position: relative;
+      div {
+        position: absolute;
+        height: 16px;
+        transform: translateX(-230px) translateY(-25px);
+        transition: 800ms ease all;
+        z-index: -4;
+        color: black;
+      }
+    }
+    &:hover {
+      a {
+        color: black;
+      }
+      .console__animation {
+        div {
+          transform: translateX(0px) translateY(-25px);
+        }
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    width: 50%;
+  }
+  @media (max-width: 900px) {
+    display: none;
+  }
+}

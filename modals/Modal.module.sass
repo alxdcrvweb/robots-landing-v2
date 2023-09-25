@@ -1,0 +1,128 @@
+.fade
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #0008
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 99999
+
+.modal
+    max-width: 80vw
+    min-height: 480px
+    padding: 24px
+    z-index: 999999
+    filter: drop-shadow(0px 0px 38px #000)
+    display: flex
+    flex-direction: column
+    gap: 50px
+    overflow: hidden
+    color: white
+
+    .biome__info
+        z-index: 2
+        width: 611px
+        height: 494px
+        .biome__descr
+            font-family: 'ChakraPetch'
+            font-size: 16px
+            line-height: 16px
+            letter-spacing: 0.05em
+            color: #FFFFFF
+            margin: 28px
+        .biome__time
+            font-family: 'ChakraPetch'
+            font-size: 16px
+            line-height: 16px
+            letter-spacing: 0.05em
+            color: rgba(255, 255, 255, 0.5)
+            margin-left: 28px
+            margin-top: 40px
+        .biome__row
+            display: flex
+            margin-top: 71px
+            .biome__title
+                width: 328px
+                font-size: 40px
+                line-height: 39px
+                letter-spacing: 0.05em
+                text-transform: uppercase
+                color: #FAE232
+                margin-left: 28px
+                margin-right: 48px
+            .biome__img
+                img
+                    position: absolute
+                    width: 173px
+                    height: 170px
+                    object-fit: cover
+    .content
+        position: absolute
+        padding: 20px
+        min-height: 480px
+        display: flex
+        justify-content: space-between
+        padding: 30px
+        align-items: center
+        flex-direction: column
+        width: 300px
+        z-index: 2
+        .buff
+            font-family: 'EuropeExt'
+            font-style: normal
+            font-weight: 700
+            font-size: 12px
+            line-height: 16px
+            letter-spacing: 0.05em
+            color: rgba(255, 255, 255, 0.7)
+        .rare
+            font-family: 'ChakraPetch'
+            font-style: normal
+            font-weight: 700
+            font-size: 12px
+            line-height: 16px
+            text-align: center
+            letter-spacing: 0.05em
+            text-transform: uppercase
+            color: #FAE232
+        .name
+            font-family: 'EuropeExt'
+            font-style: normal
+            font-weight: 700
+            font-size: 16px
+            line-height: 15px
+            text-align: center
+            letter-spacing: 0.05em
+            text-transform: uppercase
+            color: #FFFFFF
+        .zone__points
+            display: flex
+            margin-top: 15px
+        .zone__point
+            font-family: "EuropeExt"
+            font-style: normal
+            font-weight: 700
+            font-size: 12px
+            line-height: 26px
+            text-align: center
+            letter-spacing: 0.05em
+            text-transform: uppercase
+            color: rgba(91, 127, 139, 0.5)
+            display: flex
+            align-items: center
+            margin-right: 24px
+            span
+                font-size: 16px
+                color: #ffffff
+
+            img
+                margin-right: 5px
+
+    .heading
+        display: flex
+        justify-content: space-between
+        span
+            cursor: pointer
