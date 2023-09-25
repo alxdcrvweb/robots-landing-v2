@@ -2,11 +2,9 @@ import { injectable } from "inversify";
 import { action, makeObservable, observable } from "mobx";
 import "reflect-metadata";
 import { RootStore } from "./RootStore";
-import { fetchProfile, IFetchProfileResponseData } from "../api/profile";
 
 @injectable()
 export class UserStore {
-  @observable user?: IFetchProfileResponseData | null = null;
   @observable members: any[] = [];
   @observable deleted: any;
   @observable currentSound: any;
@@ -23,12 +21,7 @@ export class UserStore {
     this.members.splice(ind, 1);
     this.deleted = member;
   };
-  //get user data
-  async getUser() {
-    const { data } = await fetchProfile();
-    //@ts-ignore
-    this.user = data.user;
-  }
+
   @action playSound = (soundLink: string, volume: number) => {
     this.stopSound();
     this.currentSound = new Audio(soundLink);
