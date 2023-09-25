@@ -2,7 +2,6 @@ import { BigNumber } from 'ethers'
 import BN from 'bignumber.js'
 import numeral from 'numeral'
 import axios from "axios";
-import { baseURL } from './config';
 
 export function toBNJS(val: BigNumber | number | string) {
     return new BN(val.toString())
@@ -29,18 +28,7 @@ export const addressSlice = (address: string | undefined) => {
         address.length
     )
 }
-export const innerBackend = axios.create({
-    baseURL: baseURL,
-    headers: {
-      accept: "application/json",
-    },
-  });
-  
-  export const AuthToken = (token?: string | null) => {
-    if (token) {
-      innerBackend.defaults.headers.common["Authorization"] = "Bearer " + token;
-    }
-  };
+
 export const convertBNBtoUSD = async (value: any) => {
     if(!value || !Number(value)) return '';
     else {
