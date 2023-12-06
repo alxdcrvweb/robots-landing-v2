@@ -43,7 +43,7 @@ const Home: NextPage = observer((props) => {
           onMouseEnter={() => {
             setHover(true);
           }}
-          href="https://testnet.bscscan.com"
+          href="https://goerli.basescan.org/"
           target="_blank"
         >
           <img

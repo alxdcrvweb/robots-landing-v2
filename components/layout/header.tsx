@@ -115,7 +115,7 @@ const Header = observer(() => {
               </Link>
             );
           })}
-          <a href={`https://testnet.bscscan.com/address/${address}`}>
+          <a href={`https://goerli.basescan.org/address/${address}`} target="_blank">
             Contract address
           </a>
         </div>
