@@ -2,7 +2,6 @@ import { injectable } from "inversify";
 import { makeObservable, observable } from "mobx";
 import "reflect-metadata";
 import { RootStore } from "./RootStore";
-import { fetchProfile, IFetchProfileResponseData } from "../api/profile";
 
 @injectable()
 export class UIStore {

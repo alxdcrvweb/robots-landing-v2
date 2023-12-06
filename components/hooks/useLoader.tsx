@@ -4,16 +4,17 @@ export const useLoader = (ref: RefObject<HTMLElement>) => {
   const [status, setStatus] = useState(false);
   const [length, setLength] = useState(0);
   const [current, setCurrent] = useState(0);
-  // const [fontsLoaded, setFontsLoaded] = useState(false);
+  const [fontsLoaded, setFontsLoaded] = useState(false);
 
-  // useEffect(() => {
-  //   const areFontsReady = async () => {
-  //     await (document as any).fonts.ready;
-  //     setFontsLoaded(true);
-  //   };
-
-  //   areFontsReady();
-  // });
+  useEffect(() => {
+    if (!fontsLoaded) {
+      areFontsReady();
+    }
+  });
+  const areFontsReady = async () => {
+    await (document as any).fonts.ready;
+    setFontsLoaded(true);
+  };
   useEffect(() => {
     const updateStatus = (images: HTMLImageElement[]) => {
       setCurrent(

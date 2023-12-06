@@ -59,12 +59,12 @@ const Home: NextPage = observer((props) => {
         </a>
         <div className={s.explore__right__image}>
           <div className={s.explore__right__text}>{blockNumber}</div>
-          <div onMouseEnter={() => setHoverBnb(true)} onMouseLeave={() => setHoverBnb(false)}>
+          <div>
             <img
-              src="../../bnb.svg"
-              style={{ opacity: !hoverBnb ? 1 : 0, position: "absolute", cursor:'pointer' }}
+              src="../../base-logo.svg"
+              style={{ cursor:'pointer', width:'53px', height:'53px'}}
             />
-            <img src="../../bnb__hover.svg" style={{ opacity: hoverBnb ? 1 : 0, cursor:'pointer'  }} />
+            {/* <img src="../../base-logo.svg" style={{ opacity: hoverBnb ? 1 : 0, cursor:'pointer'  }} /> */}
           </div>
           <div className={s.explore__right__tba}>TBA</div>
         </div>
