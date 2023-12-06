@@ -79,7 +79,7 @@ const Home: NextPage = observer((props) => {
             )}
             style={{ pointerEvents: "none" }}
           >
-            COMING SOON
+            EXPLORE
           </div>
           <img
             className={classNames(
