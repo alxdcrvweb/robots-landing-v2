@@ -128,10 +128,10 @@ const Home: NextPage = observer((props) => {
           events.
         </div>
         <RoundedButton
-          title="EXPLORE"
+          title="COMING SOON"
           color="#FAE232"
           take={() => {
-            router.push("https://beta.crypterra.app/");
+            // router.push("https://beta.crypterra.app/");
           }}
         />
       </div>
