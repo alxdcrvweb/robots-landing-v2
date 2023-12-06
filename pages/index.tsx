@@ -62,7 +62,7 @@ const Home: NextPage = observer((props) => {
           <div>
             <img
               src="../../base-logo.svg"
-              style={{ cursor:'pointer', width:'53px', height:'53px'}}
+              style={{ cursor: "pointer", width: "53px", height: "53px" }}
             />
             {/* <img src="../../base-logo.svg" style={{ opacity: hoverBnb ? 1 : 0, cursor:'pointer'  }} /> */}
           </div>
@@ -77,8 +77,9 @@ const Home: NextPage = observer((props) => {
                 ? s.explore__header__text__left__animated
                 : s.explore__header__static__left
             )}
+            style={{ pointerEvents: "none" }}
           >
-            EXPLORE
+            COMING SOON
           </div>
           <img
             className={classNames(
