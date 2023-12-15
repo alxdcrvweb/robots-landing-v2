@@ -62,7 +62,7 @@ const Home: NextPage = observer((props) => {
           <div>
             <img
               src="../../base-logo.svg"
-              style={{ cursor: "pointer", width: "53px", height: "53px" }}
+              style={{ cursor: "pointer", width: "63px", height: "63px" }}
             />
             {/* <img src="../../base-logo.svg" style={{ opacity: hoverBnb ? 1 : 0, cursor:'pointer'  }} /> */}
           </div>
