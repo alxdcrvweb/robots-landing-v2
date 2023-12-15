@@ -1,20 +1,17 @@
 import styles from "./header.module.sass";
 import connect from "./connect.module.scss";
-import ConnectButtonCustom from "./connectButtonCustom";
 import Link from "next/link";
-import { UIStore } from "../../stores/UIStore";
-import { useInjection } from "inversify-react";
 import { observer } from "mobx-react";
-import { useRouter } from "next/router";
 import { useState } from "react";
 import { RandomReveal } from "react-random-reveal";
-import { addressSlice } from "../../utils/utilities";
 import Burger from "../svgs/icons/burger";
 import HeaderBg from "../svgs/backgrounds/HeaderBg";
 import { TypeAnimation } from "react-type-animation";
-import classNames from "classnames";
-const links = ["LEARN", "TOKENOMICS", "BUY TOKEN"];
 
+const links = [
+  {title:"DOCS",link:"https://docs.crypterra.app/"}, 
+  {title:"TOKENOMICS", link:"https://docs.crypterra.app/economy/tokenomics"}
+];
 const Header = observer(() => {
   const address = "";
   const [consoleType, setConsoleType] = useState("");
@@ -52,7 +49,7 @@ const Header = observer(() => {
         <div className={connect.console__header}>
           {links.map((el, i) => {
             const styled =
-              el == consoleType
+              el.title == consoleType
                 ? { transform: "translateX(0px) translateY(-25px)" }
                 : {};
             return (
@@ -60,7 +57,7 @@ const Header = observer(() => {
                 key={i}
                 className={connect.console__link}
                 style={{
-                  transform: el == "TOKENOMICS" ? "translateX(-23px)" : "none",
+                  transform: el.title == "TOKENOMICS" ? "translateX(-23px)" : "none",
                 }}
                 onMouseEnter={() => {
                   setPlay(i);
@@ -69,13 +66,13 @@ const Header = observer(() => {
                   setPlay(99);
                 }}
               >
-                <a>
-                  {play == i || consoleType == el ? (
+                <a href={el.link} target="_blank">
+                  {play == i || consoleType == el.title ? (
                     <RandomReveal
                       isPlaying={play == i}
                       duration={0.5}
                       revealDuration={1}
-                      characters={el}
+                      characters={el.title}
                     />
                   ) : (
                     el
@@ -89,7 +86,7 @@ const Header = observer(() => {
                       color: "#FAE232",
                     }}
                   >
-                    {el}
+                    {el.title}
                   </div>
                 </div>
               </div>
@@ -110,7 +107,7 @@ const Header = observer(() => {
           </div>
           {links.map((el, i) => {
             return (
-              <Link href={el} key={i}>
+              <Link href={el.title} key={i}>
                 {el}
               </Link>
             );
