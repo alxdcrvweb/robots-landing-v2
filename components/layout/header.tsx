@@ -75,7 +75,7 @@ const Header = observer(() => {
                       characters={el.title}
                     />
                   ) : (
-                    el
+                    el.title
                   )}
                 </a>
                 <div className={connect.console__animation}>
@@ -84,6 +84,7 @@ const Header = observer(() => {
                       ...styled,
                       backgroundColor: "#FAE232",
                       color: "#FAE232",
+                      marginTop:'-2px'
                     }}
                   >
                     {el.title}
@@ -108,7 +109,7 @@ const Header = observer(() => {
           {links.map((el, i) => {
             return (
               <Link href={el.title} key={i}>
-                {el}
+                {el.title}
               </Link>
             );
           })}

@@ -127,13 +127,13 @@ const Home: NextPage = observer((props) => {
           rewards through using strategical thinking, exploration, and various
           events.
         </div>
-        <RoundedButton
+        <a href="https://guild.xyz/crypterra" target="_blank"><RoundedButton
           title="JOIN GUILD"
           color="#FAE232"
           take={() => {
-            router.push("https://beta.crypterra.app/");
+           
           }}
-        />
+        /></a>
       </div>
       <Footer />
     </div>
