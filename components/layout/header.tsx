@@ -108,9 +108,9 @@ const Header = observer(() => {
           </div>
           {links.map((el, i) => {
             return (
-              <Link href={el.title} key={i}>
+              <a href={el.link} key={i}>
                 {el.title}
-              </Link>
+              </a>
             );
           })}
           <a href={`https://goerli.basescan.org/address/${address}`} target="_blank">
