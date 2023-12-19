@@ -59,10 +59,10 @@ const Home: NextPage = observer((props) => {
         </a>
         <div className={s.explore__right__image}>
           <div className={s.explore__right__text}>BUILD ON BASE</div>
-          <div>
+          <div className={s.explore__right__logo}>
             <img
               src="../../base-logo.png"
-              style={{ cursor: "pointer", width: "63px", height: "63px" }}
+              style={{ cursor: "pointer", width: "30px", height: "30px" }}
             />
             {/* <img src="../../base-logo.svg" style={{ opacity: hoverBnb ? 1 : 0, cursor:'pointer'  }} /> */}
           </div>
