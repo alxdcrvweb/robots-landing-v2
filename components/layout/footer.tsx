@@ -106,8 +106,10 @@ const Footer = observer(() => {
           </a>
         </div>
         <div className={style.footer__socials}>
-          <div
+          <a
             className={style.footer__element}
+            href="https://twitter.com/Crypterra_app"
+            target="_blank"
             onMouseEnter={() => {
               setOn("twitter");
             }}
@@ -116,9 +118,11 @@ const Footer = observer(() => {
             }}
           >
             <Twitter on={on == "twitter"} />
-          </div>
-          <div
+          </a>
+          <a
             className={style.footer__element}
+            href="https://t.me/crypterra_portal"
+            target="_blank"
             onMouseEnter={() => {
               setOn("telegram");
             }}
@@ -127,9 +131,11 @@ const Footer = observer(() => {
             }}
           >
             <Telegram on={on == "telegram"} />
-          </div>
-          <div
+          </a>
+          <a
             className={style.footer__element}
+            href="https://discord.gg/NH6TYRVk"
+            target="_blank"
             onMouseEnter={() => {
               setOn("discord");
             }}
@@ -138,9 +144,11 @@ const Footer = observer(() => {
             }}
           >
             <Discord on={on == "discord"} />
-          </div>
-          <div
+          </a>
+          <a
             className={style.footer__element}
+            href="https://crypterraworld.medium.com/onchain-gaming-manifesto-aff65fc2e67a"
+            target="_blank"
             onMouseEnter={() => {
               setOn("medium");
             }}
@@ -149,7 +157,7 @@ const Footer = observer(() => {
             }}
           >
             <Medium on={on == "medium"} />
-          </div>
+          </a>
         </div>
       </div>
     </div>
