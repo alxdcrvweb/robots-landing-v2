@@ -30,7 +30,7 @@ const Header = observer(() => {
               {!next ? (
                 <TypeAnimation
                   sequence={[
-                    "We designed Crypterra to provide fun and earnings for our players, regardless of the unstable conditions of the crypto market.",
+                    "WE DESIGNED CRYPTERRA TO PROVIDE A GATEWAY TO THE ONCHAIN WORLDS FOR EVERYONE.",
                     () => {
                       setNext(true);
                     },
@@ -41,7 +41,7 @@ const Header = observer(() => {
                   className={styles.type__text}
                 />
               ) : (
-                "We designed Crypterra to provide fun and earnings for our players, regardless of the unstable conditions of the crypto market."
+                "WE DESIGNED CRYPTERRA TO PROVIDE A GATEWAY TO THE ONCHAIN WORLDS FOR EVERYONE."
               )}
             </div>
           </div>
