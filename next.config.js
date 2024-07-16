@@ -2,6 +2,7 @@ const isExport = process.env.EXPORT
 
 const config = isExport
     ? {
+            output: 'export',
           images: {
               loader: 'akamai',
               path: '',
