@@ -1,0 +1,38 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: prepare deployment
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SERVER_HOST: ${{ secrets.SERVER_HOST }}
+        SERVER_USER: ${{ secrets.SERVER_USER }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
+    - name: Deploy to remote server
+      env:
+        SERVER_HOST: ${{ secrets.SERVER_HOST }}
+        SERVER_USER: ${{ secrets.SERVER_USER }}
+      run: |
+        ssh ${SERVER_USER}@${SERVER_HOST} << 'EOF'
+          cd /var/www/
+          git clone git@github.com:p2e-game-v4/robots-landing-v2.git
+          cd robots-landing-v2
+          yarn install
+          yarn build
+          yarn export
+        EOF
